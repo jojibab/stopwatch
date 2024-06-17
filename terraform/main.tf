@@ -15,7 +15,7 @@ resource "aws_instance" "ubuntu_instance" {
               #!/bin/bash
               sudo apt-get update
               sudo apt-get install docker.io -y
-              sudo usermod -aG docker $USER   #my case is ubuntu
+              sudo usermod -aG docker $USER
               newgrp docker
               sudo chmod 777 /var/run/docker.sock
               echo dckr_pat_Qdt6UgFFu7GG3krulmCB_D5w5Kg | docker login -u jojibabu1043 --password-stdin
