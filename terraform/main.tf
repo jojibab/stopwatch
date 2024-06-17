@@ -26,6 +26,7 @@ resource "aws_instance" "ubuntu_instance" {
   tags = {
     Name = "UbuntuInstance"
   }
+  depends_on = [ aws_security_group.allow_ssh, aws_vpc.vpc ]
 }
 
 data "aws_ami" "ubuntu" {
