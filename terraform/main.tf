@@ -19,7 +19,7 @@ resource "aws_instance" "ubuntu_instance" {
               newgrp docker
               sudo chmod 777 /var/run/docker.sock
               echo dckr_pat_Qdt6UgFFu7GG3krulmCB_D5w5Kg | docker login -u jojibabu1043 --password-stdin
-              docker run -p 3000:3000 jojibabu1043/stopwatch:1.0
+              docker run -p 3000:3000 jojibabu1043/stopwatch:latest
               EOF
 
 
